@@ -1,0 +1,76 @@
+{
+    "projectName": "Our Custom JS Library",
+    "licenseText": "copyleft",
+    "packages": [
+        {
+            "name": "Foundation",
+            "target": "pkgs/foundation.js",
+            "id": "foundation",
+            "files": [
+                {
+                    "path": "src/version/",
+                    "name": "Version.js"
+                },
+                {
+                    "path": "src/lang/",
+                    "name": "String.js"
+                },
+                {
+                    "path": "src/class/",
+                    "name": "Class.js"
+                },
+                {
+                    "path": "src/class/",
+                    "name": "Loader.js"
+                },
+                {
+                    "path": "src/lang/",
+                    "name": "Error.js"
+                }
+            ]
+        },
+        {
+            "name": "tail",
+            "target": "pkgs/tail.js",
+            "id": "tail",
+            "files": [
+                {
+                    "path": "src/lang/",
+                    "name": "tail.js"
+                }
+            ]
+        }
+    ],
+    "builds": [
+        {
+            "name": "All Dev",
+            "target": "lib-dev.js",
+            "options": {
+                "debug": true
+            },
+            "packages": [
+                "foundation",
+                "tail"
+            ]
+        },
+        {
+            "name": "All",
+            "target": "lib.js",
+            "compress": true,
+            "packages": [
+                "foundation",
+                "tail"
+            ]
+        }
+    ],
+    "resources": [
+        {
+            "src": "src/",
+            "dest": "src"
+        },
+        {
+            "src": "../platform/src/",
+            "dest": "src"
+        }
+    ]
+}

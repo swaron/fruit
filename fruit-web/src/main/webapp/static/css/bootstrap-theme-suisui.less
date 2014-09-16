@@ -1,0 +1,155 @@
+
+/* 导航项目 减小padding */
+ul.navbar-nav>li>a {
+	font-size: 16px;
+	line-height:24px;
+	padding: 0px 5px;
+	display: inline-block;
+}
+
+ul.navbar-nav{
+	margin: 0px;
+}
+/* 导航项目 labe，span维持同样样式 */
+ul.navbar-nav>li>label,ul.navbar-nav>li>span {
+	font-size: 16px;
+	line-height:24px;
+	padding: 0px 5px;
+	display: inline-block;
+	color: rgb(119, 119, 119);
+}
+
+.panel-heading {
+	padding: 10px;
+}
+
+.panel-body {
+	padding: 10px;
+}
+
+nav.navbar {
+	min-height: 28px;
+	padding-top:4px;
+	padding-bottom:4px;
+	margin-bottom: 20px;
+}
+@media (min-width: @screen-xs-min) {
+	nav.navbar {
+		margin-bottom: 4px;
+	}
+}
+/* 去掉导航的圆角 */
+nav.navbar-default{
+	border-radius:0px;
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(252, 252, 252) 100%);
+	background-color: rgb(252, 252, 252);
+}
+.modal-content .panel {
+	margin-bottom: 0px;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 2px solid darken(@btn-primary-bg, 5%);
+	/*border-top: 2px solid rgb(192, 85, 85) */
+}
+hr.sub {
+	border-top: solid 1px rgb(231, 230, 230);
+}
+.container-fluid{
+	max-width: 1230px;
+	min-width:240px;
+}
+
+.container-fluid hr{
+}
+
+.table-compact>thead>tr>th,.table-compact>tbody>tr>th,.table-compact>tfoot>tr>th,.table-compact>thead>tr>td,.table-compact>tbody>tr>td,.table-compact>tfoot>tr>td
+	{
+	padding: 2px;
+}
+.form-inline .form-group{
+	margin-right: 10px;
+}
+
+@media (min-width:  @screen-lg-min) {
+  .avg-lg-5, .avg-lg-7 {
+    float: left;
+  }
+  .avg-lg-5 {
+    width: 20%;
+  }
+  .avg-lg-7 {
+    width: 14.28571428571429%;
+  }
+  .avg-lg-pull-5 {
+    right: 20%;
+  }
+  .avg-lg-pull-7 {
+    right: 14.28571428571429%;
+  }
+  .avg-lg-push-5 {
+    left: 20%;
+  }
+  .avg-lg-push-7 {
+    left: 14.28571428571429%;
+  }
+  .avg-lg-offset-5 {
+    margin-left: 20%;
+  }
+  .avg-lg-offset-7 {
+    margin-left: 14.28571428571429%;
+  }
+}
+
+.col-fix{
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+.col-xs-flex{
+	float: none;
+	width: auto;
+	position: relative;
+	min-height: 1px;
+}
+
+@media (min-width: @screen-sm-min) {
+  .col-sm-flex{
+	float: none;
+	width: auto;
+	position: relative;
+	min-height: 1px;
+  }
+}
+@media (min-width: @screen-md-min) {
+  .col-md-flex{
+	float: none;
+	width: auto;
+	position: relative;
+	min-height: 1px;
+  }
+}
+@media (min-width: @screen-lg-min) {
+  .col-lg-flex{
+	float: none;
+	width: auto;
+	position: relative;
+	min-height: 1px;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+	.container-fluid{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+.thumbnail:HOVER,.thumbnail:FOCUS {
+	border: 1px solid darken(@btn-primary-bg, 5%);
+}
+

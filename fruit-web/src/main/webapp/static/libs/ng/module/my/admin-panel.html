@@ -1,0 +1,27 @@
+<ul class="list-unstyled admin-nav">
+	<li><a ng-href="{{::utils.url('/admin/order/episode.html') }}">订单</a></li>
+	<li><a ng-href="{{::utils.url('/admin/attribute.html')}}">属性</a></li>
+	<li><a ng-href="{{::utils.url('/admin/category.html')}}">分类</a></li>
+	<li><a ng-href="{{::utils.url('/admin/product.html')}}">产品</a></li>
+	<li><a ng-href="{{::utils.url('/admin/episode.html')}}">批次</a></li>
+	<li><a ng-href="{{::utils.url('/admin/system/cache.html')}}">缓存</a></li>
+	<li><a ng-href="#popup-admin-center" data-toggle="modal" data-target="#popup-admin-center">管理中心</a></li>
+</ul>
+<div id="popup-admin-center" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title text-primary">&nbsp;</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="list-unstyled">
+					<li><a href=""></a> </li>
+				</ul>
+				<a class="btn btn-primary" href="{{::utils.url('/admin/seller.html')}}" target="admin-window">批发商信息</a>
+				<a class="btn btn-primary" href="{{::utils.url('/admin/quotation.html')}}" target="admin-window">行情</a>
+				<a class="btn btn-primary" href="{{::utils.url('/admin/home-banner.html')}}" target="admin-window">首页广告秀</a>
+			</div>
+		</div>
+	</div>
+</div>

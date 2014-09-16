@@ -1,0 +1,43 @@
+
+/* 价格为红色 */
+.price{
+	color: @brand-primary;
+}
+em.price,b.price{
+	font-size: 1.3em;
+	font-weight:bold;
+}
+
+/* 添加到购物车 */
+.cart-add input {
+	width: 36px;
+	height: 29px;
+	color: rgb(85, 85, 85);
+	text-align: center;
+}
+
+.cart-add  span {
+	cursor:pointer;
+}
+.cart-add  i {
+	font-size: 22px;
+	line-height: 29px;
+	vertical-align: middle;
+	.text-emphasis-variant(@brand-primary);
+}
+
+.cart-add .btn {
+	padding: 3px 4px;
+}
+
+.nav .cart{
+	position: relative;
+}
+
+.nav .cart .badge{
+	position: absolute;
+	left: 8px;
+	top: -6px;
+	background-color: @brand-primary;
+}
+

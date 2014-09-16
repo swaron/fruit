@@ -1,0 +1,69 @@
+.brand-bar li{
+	float: left;
+}
+.brand-bar a:HOVER, .brand-bar a:FOCUS{
+	text-decoration: none;
+}
+
+.brand-img {
+	width: 40px;
+	height: 40px;
+	margin: 20px 8px 20px 8px;
+}
+.brand-txt {
+	margin: 20px 0px;
+	display:block;
+	font-size: 32px;
+	line-height: 40px;
+	color: rgb(244,164,16);
+}
+
+@media ( max-width : @screen-xs-min) {
+	.brand-img {
+		margin: 0px 8px 0px 20px;
+	}
+	.brand-txt {
+		margin: 0px;
+	}
+}
+
+.logo-stack {
+	position: relative;
+	display: inline-block;
+	vertical-align:top;
+	width: 40px;
+	height: 40px;
+}
+.logo-stack i{
+	position: absolute;
+	left: 0;
+	width: 40px;
+	height: 40px;
+}
+.logo-stack .logo-bottom {
+	background-image: url("img/logo/outer-40.png?v=2");
+}
+
+.logo-stack .logo-top {
+	background-image: url("img/logo/inner-40.png?v=2");
+	-webkit-animation: spin 4s linear 0s infinite;
+	animation: spin 4s linear 0s infinite;
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+a.logo-stack:hover .logo-top{
+	-webkit-animation-play-state: running;
+	animation-play-state: running;
+}
+
+
+.admin-nav{
+	position: fixed;
+	top: 150px;
+	padding: 10px 20px 10px 10px;
+	right: 2px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid rgb(236, 169, 182);
+	box-shadow: 1px 2px 3px rgb(128, 128, 128);
+	border-radius: 10px 0px 0px 10px;
+}

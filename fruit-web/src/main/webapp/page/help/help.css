@@ -1,0 +1,14 @@
+.help-block{
+	max-width: 800px;
+	float: left;
+	padding-left: 8px;
+	border-left: 1px solid #eee;
+}
+.help-side{
+	float: left;
+	width: 150px;
+}
+ul.help-side  ul{
+	margin-left: 1em;
+	padding-bottom: 15px;
+}

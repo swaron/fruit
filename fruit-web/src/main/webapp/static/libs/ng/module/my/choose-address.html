@@ -1,0 +1,24 @@
+<div class="modal fade" tabindex="-1" role="dialog" ng-init="_user.loadAddress()">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+				<h4 class="modal-title text-primary">配送地址</h4>
+				<span class="help-block">我们目前只为下列地址提供个人团购服务。 如您公司有团购需求，请联系我们。 </span>
+				<h4 class="modal-title"><i class="al al-wuliu"></i> 请选择</h4>
+			</div>
+			<div class="modal-body ">
+				<div class="list-group" data-dismiss="modal">
+					<div ng-if="_user.result.addresses == null">
+						<i class="fa fa-spinner fa-spin"></i> 加载中...
+					</div>
+					<a ng-repeat="item in _user.result.addresses" href="" class="list-group-item" ng-click="_user.storeAddress(item)"
+						ng-class="{'active':(_repo.model.address.name == item.name)}">{{item.name}} <span class="pull-right">{{item.description}}</span> </a>
+				</div>
+				<!-- <div class="text-center">
+				<button class="btn btn-primary" data-dismiss="modal">确定</button>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>

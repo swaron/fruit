@@ -1,0 +1,4 @@
+1.3.0-rc.1
+
+11370 --var args = argsFn.length ? [] : null;
+11370 ++var args = [];

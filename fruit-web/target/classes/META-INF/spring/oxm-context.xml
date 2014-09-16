@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xsi:schemaLocation="http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name="contextPaths" value="com.suisui.data.schemas.domain1.category1.v10" />
+		<property name="schemas" value="classpath:/com/suisui/data/schemas/*.xsd" />
+		<property name="supportJaxbElementClass" value="true" />
+	</bean> -->
+	<bean id="xstreamMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+		<property name="aliases">
+			<props>
+			</props>
+		</property>
+	</bean>
+</beans>

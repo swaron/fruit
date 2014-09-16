@@ -1,0 +1,21 @@
+//<span id="fa-check" class="fa" style="visibility:none;"></span>
+angular.element(document).ready(function() {
+	var getStyle = function(el, attr) {
+		if (el.currentStyle) {
+			return el.currentStyle[attr];
+		} else {
+			return window.getComputedStyle(el, null)[attr];
+		}
+	};
+	var head = document.getElementsByTagName('head')[0];
+	var body = document.getElementsByTagName('body')[0];
+	var $ = angular.element;
+	if (getStyle(body, 'color') !== 'rgb(51, 51, 51)') {
+		$(head).prepend('<link rel="stylesheet" href="${asset}/libs/bootstrap-3.1.0/css/bootstrap.css">');
+		$(head).prepend('<link rel="stylesheet" href="${asset}/libs/bootstrap-3.1.0/css/bootstrap-theme.css">');
+	}
+	var fa = document.getElementById('fa-check');
+	if (getStyle(fa, 'fontFamily') !== 'FontAwesome') {
+		$(head).prepend('<link rel="stylesheet" href="${asset}/libs/font-awesome-4.0.3/css/font-awesome.css">');
+	}
+});

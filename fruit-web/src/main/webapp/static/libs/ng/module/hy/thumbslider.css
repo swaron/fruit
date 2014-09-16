@@ -1,0 +1,150 @@
+/*
+    Thumb Slider for angular
+
+    Copyright 2014, HengYan Technical LTD.
+    License: GNU General Public License, version 3 (GPL-3.0)
+    http://www.opensource.org/licenses/gpl-3.0.html
+*/
+
+/*
+   ex: <div class="" hy-thumb-slider="::images"></div>
+   structure:
+   <div class="thumb-slider">
+	<div class="left ts-nav"></div>
+	<div class="ts-wrapper">
+		<ul class="ts-main">
+			<li><img></img></li>
+		</ul>
+	</div>
+	<div class="right ts-nav"></div>
+	</div>
+*/
+.thumb-slider {
+	width: 100%; /* widht + margin = 360 */
+	height: 62px; /* img 60px + border 2px */
+	margin-top: 4px;
+	position: relative; /* Containers need relative or absolute position. */
+	padding-left: 22px; /* 为按钮预留空间 */
+	padding-right: 22px;
+}
+
+.thumb-slider .ts-wrapper {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.thumb-slider ul.ts-main {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	white-space: nowrap;
+	/* font-size:0 stop gaps between display-inline li elemets */
+	/* Either do this, or remove all white space in HTML beween li elements */
+	font-size: 0;
+	/* prevent annoying iPad cut/paste actions */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+/* Style for the list items that surround the thumbnails */
+.thumb-slider li {
+	display: inline-block;
+	line-height: 0px;
+	margin: 0px;
+	padding: 0px 4px;
+}
+
+/* Add a border to the thumbnails. */
+.thumb-slider li img {
+	cursor: pointer;
+	border: 1px solid #ccc;
+}
+
+/* Hover effect for the images */
+.thumb-slider li img:hover {
+	border: 1px solid rgb(242, 164, 16);
+}
+/* active style */
+.thumb-slider li.active img {
+	border: 1px solid rgb(248, 166, 11);
+}
+
+/*
+    Following is the CSS for the navigation buttons.
+    They are designed to fit flush on the ends of the slider
+    using absolute positioning, with the container as the parent element.
+    The sizes are set to match the demo slider.
+    You can change any of this as you wish - you don't even need to use these classes.
+    Position the buttons where you like on the page, change sizes, use images etc.
+    They don't have to be children of the container.
+*/
+
+/* Common style for the buttons */
+.thumb-slider .ts-nav {
+	position: absolute;
+	background-color: #ccc;
+	border: 1px solid #aaa;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+	z-index: 1;
+	cursor: pointer;
+	/* Font related items for the symbols used on buttons */
+	/* Obviously not needed if you're just using images */
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Hover style for active button */
+.thumb-slider .ts-nav:hover {
+	color: #fff;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Disabled style when button is not active due to extents being reached. */
+/* You could do other things e.g. make buttons dissapear completely. */
+.thumb-slider .ts-nav.disabled, .thumb-slider .ts-nav.disabled:hover {
+	background-color: #efefef;
+	color: #ccc;
+	cursor: default;
+	box-shadow: none;
+}
+
+/* Horizontal buttons. */
+.thumb-slider .ts-nav {
+	height: 100%;
+	/* line-height: ??*/
+	width: 20px;
+	top: 0px;
+}
+/* Left edge button. */
+.thumb-slider .ts-nav.left {
+	left: 0px;
+	border-radius: 5px 0px 0px 5px;
+}
+/* Right edge button */
+.thumb-slider .ts-nav.right {
+	right: 0px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+/* Vertical buttons. */
+.thumb-slider .ts-nav.vert {
+	left: 0px;
+	height: 20px;
+	line-height: 20px;
+}
+
+/* Top edge button. */
+.thumb-slider .ts-nav.vert.top {
+	top: -22px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+/* Bottom edge button. */
+.thumb-slider .ts-nav.vert.bottom {
+	bottom: -22px;
+	border-radius: 0px 0px 5px 5px;
+}

@@ -1,0 +1,42 @@
+<div>
+	<div class="">
+		<label>搜索条件:</label>
+		<table class="table table-borderless table-compact filters text-left" style="">
+			<tr ng-repeat="filter in model.filters" data-index="{{$index}}" class="form-inline">
+				<td><label class="">{{filter.property}} {{filter.operator}}</label> <input type="text"
+					class="form-control" name="filterValue" ng-readonly="!filter.editing" ng-keyup="c.finishOnEnter(filter,$event)"
+					value="{{filter.value}}" /> <a href="javascript:void(0);" name="edit" my-invisible="filter.readonly"
+					ng-click="filter.editing=!filter.editing"> <i class="fa fa-edit"> </i><span>{{filter.editing?"确定":"修改"}}</span>
+				</a> <a href="javascript:void(0);" name="remove" my-invisible="filter.required" ng-click="c.removeFilter($index)"> <i
+						class="fa fa fa-trash-o"> </i><span>删除</span>
+				</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="">
+		<label>添加过滤条件:</label>
+		<ul class="form-inline list-unstyled">
+			<li>
+			<input name="column-select" class="form-control" ng-model="newFilter.property" ng-init="newFilter.property=model.columns[0].name" list="myfilter-attr-datalist" />
+			<datalist id="myfilter-attr-datalist">
+				<option ng-repeat="col in model.columns" ng-value="col.name" >{{col.text}}</option>
+			</datalist>
+			<select name="operator-select" class="form-control" ng-model="newFilter.operator" ng-init="newFilter.operator='like'" ><option value="=">=(等于)</option>
+					<option value="&lt;">&lt;(小于)</option>
+					<option value="&lt;=">&lt;=(小于等于)</option>
+					<option value="&gt;">&gt;(大于)</option>
+					<option value="&gt;=">&gt;=(大于等于)</option>
+					<option value="like">like(字符串包含)</option>
+					<option value="in">in(存在于，多个字符串用,隔开)</option>
+			</select> 
+			<input name="value-input" type="text" class="form-control" ng-model="newFilter.value" >
+			<button type="button" class="btn btn-default" ng-click="c.addFilter(newFilter)">添加</button>
+			<div class="form-group" style="width: auto;">
+					<button type="button" class="btn btn-default" ng-click="query()">
+						<i class="fa fa-file-text-o"> </i>查询
+					</button>
+			</div></li>
+		</ul>
+	</div>
+</div>
